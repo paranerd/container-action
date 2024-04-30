@@ -20,7 +20,8 @@ jobs:
         run: echo "The time was ${{ steps.hello.outputs.time }}"
 
   arc_job:
-    runs-on: arc-runner-set-docker-1
+    runs-on: arc-runner-set-docker-2
+    name: Another job for Docker
     steps:
       - run: echo "🎉 This job uses runner scale set runners!"
       - uses: actions/checkout@v4
