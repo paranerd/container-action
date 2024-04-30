@@ -18,3 +18,10 @@ jobs:
         run: sleep 5
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+
+  arc_job:
+    runs-on: arc-runner-set-docker-1
+    steps:
+      - run: echo "🎉 This job uses runner scale set runners!"
+      - uses: actions/checkout@v4
+      - run: docker pull busybox
